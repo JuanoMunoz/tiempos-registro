@@ -2,21 +2,21 @@
     "name" : "Tiempos S.A.S - Estamos Contratando",
     "short-name": "Tiempos S.A.S",
     "display": "standalone",
-    "start_url": "/",
+    "start_url": "/tiempos-registro/",
     "icons":[
 
         {
-            "src": "images/logo.webp",
+            "src": "/tiempos-registro/images/logo.webp",
             "sizes": "993x232",
             "type": "image/webp"
         },
         {
-            "src": "images/logotiempos3.webp",
+            "src": "/tiempos-registro/images/logotiempos3.webp",
             "sizes": "91x90",
             "type": "image/webp"
         },
         {
-            "src": "images/logo-android.png",
+            "src": "/tiempos-registro/images/logo-android.png",
             "sizes": "513x513",
             "type": "image/webp"
         }
