@@ -1,13 +1,13 @@
 const CACHE_NAME = "static-v1";
 const urlsToCache = [
-  "/manifest.json",
-  "/index.html",
-  "/src/jquery.js",
-  "/src/index.js",
-  "/src/styles.css",
-  "/images/logo.webp",
-  "/images/logotiempos3.webp",
-  "/images/logo-android.png"
+  "manifest.json",
+  "index.html",
+  "src/jquery.js",
+  "src/index.js",
+  "src/styles.css",
+  "images/logo.webp",
+  "images/logotiempos3.webp",
+  "images/logo-android.png"
 ];
 
 self.addEventListener('install', e => {

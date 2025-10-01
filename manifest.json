@@ -6,17 +6,17 @@
     "icons":[
 
         {
-            "src": "/images/logo.webp",
+            "src": "images/logo.webp",
             "sizes": "993x232",
             "type": "image/webp"
         },
         {
-            "src": "/images/logotiempos3.webp",
+            "src": "images/logotiempos3.webp",
             "sizes": "91x90",
             "type": "image/webp"
         },
         {
-            "src": "/images/logo-android.png",
+            "src": "images/logo-android.png",
             "sizes": "513x513",
             "type": "image/webp"
         }

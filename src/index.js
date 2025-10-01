@@ -1,5 +1,5 @@
 if("serviceWorker" in navigator){
-    navigator.serviceWorker.register("/sw.js").then((rg)=>{
+    navigator.serviceWorker.register("sw.js").then((rg)=>{
         console.log("Papi estamos online registraos",rg.scope)
     }).catch((err=>console.log("Nos jodimos vamos tocó en edge")))
 }
