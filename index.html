@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registrate en TIEMPOS</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0095c8">
+    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="apple-touch-icon" sizes="91x90" href="/images/logotiempos3.webp"></link>
+    <link rel="shortcut icon" href="/images/logotiempos3.webp" type="image/x-icon">
+</head>
+
+<body>
+    <main class="flex flex-col justify-center  gap-20 px-10 py-20 bg-gradient-to-bl from-black via-[#001f2a] text-gray-300 via-[#0a0f12] to-[#003b4a]"
+        style="font-family: Arial, sans-serif;">
+        <section class="mb-8 flex flex-col items-center justify-between md:flex-row">
+            <h1 class="mb-4    text-4xl leading-tight font-black tracking-tighter md:mb-0 md:text-5xl">Aplica
+                ahora</h1>
+            <img onclick="handleSetInputFocus()" src="/images/logo.webp" alt="" class=" w-1/3 object-fill" />
+        </section>
+
+        <form class="flex flex-1 flex-col gap-20">
+            <label
+                class="flex    flex-col gap-3 text-6xl font-medium tracking-tighter md:flex-row md:items-center md:gap-5 md:text-5xl">
+                <span>Mi nombre es</span>
+                <input placeholder="(Apellido, Nombre)"
+                    class="flex-1 appearance-none border-b-4 border-[#0095c8] pb-2 focus:outline-none" type="text" />
+            </label>
+
+            <label
+                class="gap-3text-6xl flex    flex-col font-medium tracking-tighter md:flex-row md:items-center md:gap-5 md:text-5xl">
+                <span>con documento</span>
+                <input placeholder="(Documento de identidad)" class="flex-1 appearance-none focus:outline-none" type="text" />
+            </label>
+
+            <article class="flex flex-col gap-4 md:flex-row">
+                <label
+                    class="flex    flex-col gap-3 text-6xl font-medium tracking-tighter md:flex-row md:items-center md:gap-5 md:text-5xl">
+                    <span>de sexo</span>
+                    <input placeholder="(F/M)" class="w-full appearance-none focus:outline-none  md:w-56" type="text" />
+                </label>
+                <label
+                    class="flex    flex-col gap-3 text-6xl font-medium tracking-tighter md:flex-row md:items-center md:gap-5 md:text-5xl">
+                    <span>, tipo de sangre</span>
+                    <input placeholder="(A+)" class="w-full appearance-none focus:outline-none md:w-28" type="text" />
+                </label>
+            </article>
+
+            <label
+                class="flex    flex-col gap-3 text-6xl font-medium tracking-tighter md:flex-row md:items-center md:gap-5 md:text-5xl">
+                <span>y nacido el</span>
+                <input placeholder="(Fecha de nacimiento)" class="flex-1 appearance-none focus:outline-none" type="text" />
+            </label>
+
+            <label
+                class="flex flex-col gap-3 text-6xl font-medium tracking-tighter md:flex-row md:items-center md:gap-5 md:text-5xl">
+                <span>Mi correo es</span>
+                <input placeholder="(Correo electrónico)" class="flex-1 appearance-none focus:outline-none" type="email" />
+            </label>
+            <label
+                class="flex flex-col gap-3 text-6xl font-medium tracking-tighter md:flex-row md:items-center md:gap-5 md:text-5xl">
+                <span>con número de celular</span>
+                <input placeholder="(+57 ...)" class="w-96 appearance-none focus:outline-none" type="email" />
+            </label>
+            
+            <h2 class=" text-center text-6xl font-thin tracking-tighter md:text-left mt-12 md:text-4xl">¡Y estoy
+                interesado en formar parte de la familia Tiempos! 🚀</h2>
+            <div class="w-full text-center">
+                <button type="submit"
+                    class=" rounded-full cursor-pointer hover:bg-[#00677f] text-3xl  tracking-tighter text-white shadow-md transition-all duration-200 hover:-translate-y-1 bg-[#0095c8] md:w-1/2 md:h-28 md:px-8 md:py-4 font-black">Registrarme</button>
+            </div>
+        </form>
+    </main>
+    <input type="text" id="inputScanner" class="opacity-0 absolute top-0 left-[-99999px]" autofocus type="text">
+    <script src="/src/jquery.js"></script>
+    <script src="/src/index.js"></script>
+</body>
+</html>

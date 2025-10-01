@@ -1,0 +1,26 @@
+{
+    "name" : "Tiempos S.A.S - Estamos Contratando",
+    "short-name": "Tiempos S.A.S",
+    "display": "standalone",
+    "start_url": "/",
+    "icons":[
+
+        {
+            "src": "/images/logo.webp",
+            "sizes": "993x232",
+            "type": "image/webp"
+        },
+        {
+            "src": "/images/logotiempos3.webp",
+            "sizes": "91x90",
+            "type": "image/webp"
+        },
+        {
+            "src": "/images/logo-android.png",
+            "sizes": "513x513",
+            "type": "image/webp"
+        }
+    ],
+    "background_color": "#000000",
+    "theme_color": "#0095c8"
+}
