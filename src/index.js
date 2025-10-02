@@ -14,7 +14,7 @@ $(document).ready(() => {
     const input = $("#inputScanner");
     const tipoDocSelect = $("#tipoDocSelect");
     const tipoDocSpan = $("#tipoDocSpan");
-
+    let primerNombre,segundoNombre,primerApellido,segundoApellido;
     input.on('keydown', function(e) {
         if(e.keyCode === 9){
             e.preventDefault()
@@ -30,6 +30,11 @@ $(document).ready(() => {
     input.change(function(e) {
         const infoCandidate = input.val().split("|");
         const isAnOldCC = infoCandidate.length == 8
+        const nombreArray = infoCandidate.slice(1,5);
+        primerApellido = nombreArray[0];
+        segundoApellido = nombreArray[1];
+        primerNombre = nombreArray[2];
+        segundoNombre = nombreArray[3];
         nombre.val(infoCandidate.slice(1,5).join(" "));
         documento.val(infoCandidate[0]);
         sexo.val(infoCandidate[5].toUpperCase() === 'M' ? 'masculino' : "femenino");
@@ -53,7 +58,10 @@ $(document).ready(() => {
         else if (candidates.find(c=>c.documento === documento.val()))showToast("Este documento ya está registrado","error");
         else {
             const candidate = {
-                nombre: nombre.val(),
+                primerNombre: primerNombre,
+                segundoNombre: segundoNombre,
+                primerApellido: primerApellido,
+                segundoApellido: segundoApellido,
                 documento: documento.val(),
                 sexo: sexo.val(),
                 tipoSangre: tipoSangre.val() == "" ? 'N/A' :tipoSangre.val(),
