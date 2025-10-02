@@ -19,63 +19,63 @@
 </head>
 
 <body class="bg-gradient-to-bl ws from-black via-[#001f2a] via-[#0a0f12] to-[#003b4a]">
-<main class="flex h-screen w-screen flex-col justify-center gap-8 bg-gradient-to-bl from-black via-[#0a0f12] via-[#001f2a] to-[#003b4a] px-4 pb-8 font-sans text-gray-300">
+<main class="flex h-screen w-screen flex-col justify-center gap-8 bg-gradient-to-bl from-black via-[#0a0f12] via-[#001f2a] to-[#003b4a] px-4  font-sans text-gray-300">
   <section class="mb-6 flex items-center justify-between">
-    <h1 class="mb-4 text-center text-3xl font-black tracking-tighter sm:text-4xl md:text-left md:text-5xl">Aplica ahora</h1>
-    <img onclick="handleSetInputFocus()" src="/tiempos-registro/images/logo.webp" alt="Logo" class="w-1/2 object-contain sm:w-1/3 md:w-1/4" />
-    <!-- <img onclick="handleSetInputFocus()" src="/images/logo.webp" alt="Logo" class="w-1/2 object-contain sm:w-1/3 md:w-1/4" /> -->
+    <h1 class="mb-4 text-center text-3xl font-black tracking-tighter">Aplica ahora</h1>
+    <img onclick="handleSetInputFocus()" src="/tiempos-registro/images/logo.webp" alt="Logo" class="w-1/2 object-contain" />
   </section>
 
-  <form class="ml-3 flex flex-col gap-6 text-2xl leading-snug sm:text-2xl md:gap-10 md:text-2xl">
+  <form class="ml-3 flex flex-col gap-6 text-2xl leading-snug">
     <label class="flex gap-3">
       <span>Mi nombre es</span>
-      <input id="nombre" placeholder="(Apellido, Nombre)" class="flex-1 border-b-2 border-[#0095c8] bg-transparent px-2 pb-1 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
+      <input id="nombre" placeholder="(Apellido, Nombre)" class="flex-1 border-b-2 border-[#0095c8] bg-transparent px-2 pb-1 text-2xl focus:outline-none" type="text" />
     </label>
 
     <label class="flex gap-3">
       <span>con</span>
-      <select name="" class="" id="tipoDocSelect">
+      <select name="" id="tipoDocSelect">
         <option selected value="CC">cédula de ciudadania</option>
         <option value="CE">cédula de extranjería</option>
         <option value="PA">pasaporte</option>
         <option value="PPT">Permiso por Protección Temporal</option>
       </select>
-      <input id="documento" placeholder="(DNI)" class="w-8r text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
+      <input id="documento" placeholder="(DNI)" class="w-32 text-2xl focus:outline-none" type="text" />
     </label>
 
     <div class="flex flex-row flex-wrap gap-4">
       <label class="flex items-center gap-3">
         <span>de sexo</span>
-        <input id="sexo" placeholder="(F/M)" class="w-[8rem] text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
+        <input id="sexo" placeholder="(F/M)" class="w-32 text-2xl focus:outline-none" type="text" />
       </label>
       <label class="flex items-center gap-2">
         <span>, tipo de sangre</span>
-        <input id="tipoSangre" placeholder="(A+)" class="w-20 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
+        <input id="tipoSangre" placeholder="(A+)" class="w-20 text-2xl focus:outline-none" type="text" />
       </label>
     </div>
 
     <label class="flex gap-3">
       <span>y nacido el</span>
-      <input id="nacimiento" placeholder="(Fecha de nacimiento)" class="flex-1 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
+      <input id="nacimiento" placeholder="(Fecha de nacimiento)" class="flex-1 text-2xl focus:outline-none" type="text" />
     </label>
     
     <label class="flex gap-3">
       <span>Mi número de celular es</span>
-      <input id="numero" placeholder="(+57 ...)" class="w-48 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
+      <input id="numero" placeholder="(+57 ...)" class="w-48 text-2xl focus:outline-none" type="text" />
     </label>
+
     <label class="flex">
       <span>con correo: </span>
-      <input id="correo" placeholder="(Correo electrónico)" class="flex-1 px-2 pb-1 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="email" />
+      <input id="correo" placeholder="(Correo electrónico)" class="flex-1 px-2 pb-1 text-2xl focus:outline-none" type="email" />
     </label>
 
+    <h2 class="mt-4 text-center text-xl font-black tracking-tight">¡Y quiero formar parte de la familia Tiempos! 🚀</h2>
 
-    <h2 class="mt-6 text-center text-xl font-black tracking-tight sm:text-left sm:text-2xl md:mt-10 md:text-4xl">¡Y quiero formar parte de la familia Tiempos! 🚀</h2>
-
-    <div class="mt-4 w-full text-center md:mt-8">
-      <button type="button" id="buttonSubmitCandidate" class="mb-8 h-20 w-full cursor-pointer rounded-full bg-[#0095c8] px-6 py-3 text-2xl font-black text-white shadow-md transition-transform duration-200 hover:-translate-y-1 hover:bg-[#00677f] sm:w-2/3 sm:text-2xl md:w-1/2 md:px-8 md:py-4 md:text-2xl">Registrarme</button>
+    <div class="mt-4 w-full text-center">
+      <button type="button" id="buttonSubmitCandidate" class="mb-8 h-20 w-full cursor-pointer rounded-full bg-[#0095c8] px-6 py-3 text-2xl font-black text-white shadow-md transition-transform duration-200 hover:-translate-y-1 hover:bg-[#00677f]">Registrarme</button>
     </div>
   </form>
 </main>
+
 <div id="toast-container"></div>
 <input type="text" id="inputScanner" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="hidden-input" autofocus />
 <span id="tipoDocSpan" class="hidden-input"></span>

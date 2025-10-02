@@ -37,6 +37,7 @@ $(document).ready(() => {
         if(isAnOldCC)tipoSangre.val(infoCandidate[7])
         input.val("")
         numero.focus();
+        numero[0].setSelectionRange(0, 0);
      })
 
      const buttonSubmitCandidate = $("#buttonSubmitCandidate")
@@ -47,6 +48,7 @@ $(document).ready(() => {
         else if(numero.val().toUpperCase() === "EXCEL"){
             downloadCandidates(candidates)
         }
+        else if(numero.val().toUpperCase()=== "CLEAR")localStorage.removeItem("candidates")
         else if(!numero.val().match(/^3\d{9}$/))showToast("¡El número ingresado es inválido! (Ej: 3001234961)","error")
         else if (candidates.find(c=>c.documento === documento.val()))showToast("Este documento ya está registrado","error");
         else {
