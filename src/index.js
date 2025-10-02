@@ -30,12 +30,12 @@ $(document).ready(() => {
     input.change(function(e) {
         const infoCandidate = input.val().split("|");
         const isAnOldCC = infoCandidate.length == 8
-        const nombreArray = infoCandidate.slice(1,5);
+        nombre.val(infoCandidate.slice(1,5).join(" "));
+        const nombreArray = nombre.val().split(" ")
         primerApellido = nombreArray[0];
         segundoApellido = nombreArray[1];
         primerNombre = nombreArray[2];
         segundoNombre = nombreArray[3];
-        nombre.val(infoCandidate.slice(1,5).join(" "));
         documento.val(infoCandidate[0]);
         sexo.val(infoCandidate[5].toUpperCase() === 'M' ? 'masculino' : "femenino");
         nacimiento.val(getBirthDaySpanish(infoCandidate[6],isAnOldCC));

@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-v10s";
+const CACHE_NAME = "static-v11";
 const urlsToCache = [
   "/tiempos-registro/manifest.json",
   "/tiempos-registro/index.html",
