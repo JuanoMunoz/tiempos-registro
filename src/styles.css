@@ -219,6 +219,9 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
+  .w-32 {
+    width: calc(var(--spacing) * 29);
+  }
   .w-\[8rem\] {
     width: 8rem;
   }
