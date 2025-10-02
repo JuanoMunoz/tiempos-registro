@@ -4,6 +4,7 @@ const urlsToCache = [
   "/tiempos-registro/index.html",
   "/tiempos-registro/src/jquery.js",
   "/tiempos-registro/src/index.js",
+  "/tiempos-registro/src/xlsx.js",
   "/tiempos-registro/src/styles.css",
   "/tiempos-registro/images/logo.webp",
   "/tiempos-registro/images/logotiempos3.webp",
