@@ -14,7 +14,6 @@ $(document).ready(() => {
     const input = $("#inputScanner");
     const tipoDocSelect = $("#tipoDocSelect");
     const tipoDocSpan = $("#tipoDocSpan");
-    let primerNombre,segundoNombre,primerApellido,segundoApellido;
     input.on('keydown', function(e) {
         if(e.keyCode === 9){
             e.preventDefault()
@@ -31,11 +30,6 @@ $(document).ready(() => {
         const infoCandidate = input.val().split("|");
         const isAnOldCC = infoCandidate.length == 8
         nombre.val(infoCandidate.slice(1,5).join(" "));
-        const nombreArray = nombre.val().split(" ")
-        primerApellido = nombreArray[0];
-        segundoApellido = nombreArray[1];
-        primerNombre = nombreArray[2];
-        segundoNombre = nombreArray[3];
         documento.val(infoCandidate[0]);
         sexo.val(infoCandidate[5].toUpperCase() === 'M' ? 'masculino' : "femenino");
         nacimiento.val(getBirthDaySpanish(infoCandidate[6],isAnOldCC));
@@ -57,6 +51,11 @@ $(document).ready(() => {
         else if(!numero.val().match(/^3\d{9}$/))showToast("¡El número ingresado es inválido! (Ej: 3001234961)","error")
         else if (candidates.find(c=>c.documento === documento.val()))showToast("Este documento ya está registrado","error");
         else {
+            const nombreArray = nombre.val().split(" ")
+            const primerApellido = nombreArray[0];
+            const segundoApellido = nombreArray[1];
+            const primerNombre = nombreArray[2];
+            const segundoNombre = nombreArray[3];
             const candidate = {
                 primerNombre: primerNombre,
                 segundoNombre: segundoNombre,
