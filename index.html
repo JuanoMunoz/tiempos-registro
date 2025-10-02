@@ -5,11 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regístrate en TIEMPOS</title>
-  <link rel="manifest" href="/tiempos-registro/manifest.json">
   <meta name="theme-color" content="#0095c8">
+
+  <link rel="manifest" href="/tiempos-registro/manifest.json">
   <link rel="stylesheet" href="/tiempos-registro/src/styles.css">
   <link rel="apple-touch-icon" sizes="91x90" href="/tiempos-registro/images/logotiempos3.webp">
   <link rel="shortcut icon" href="/tiempos-registro/images/logotiempos3.webp" type="image/x-icon">
+  
+  <!-- <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="apple-touch-icon" sizes="91x90" href="/images/logotiempos3.webp">
+  <link rel="shortcut icon" href="/images/logotiempos3.webp" type="image/x-icon"> -->
 </head>
 
 <body class="bg-gradient-to-bl ws from-black via-[#001f2a] via-[#0a0f12] to-[#003b4a]">
@@ -17,16 +23,23 @@
   <section class="mb-6 flex items-center justify-between">
     <h1 class="mb-4 text-center text-3xl font-black tracking-tighter sm:text-4xl md:text-left md:text-5xl">Aplica ahora</h1>
     <img onclick="handleSetInputFocus()" src="/tiempos-registro/images/logo.webp" alt="Logo" class="w-1/2 object-contain sm:w-1/3 md:w-1/4" />
+    <!-- <img onclick="handleSetInputFocus()" src="/images/logo.webp" alt="Logo" class="w-1/2 object-contain sm:w-1/3 md:w-1/4" /> -->
   </section>
 
   <form class="ml-3 flex flex-col gap-6 text-2xl leading-snug sm:text-2xl md:gap-10 md:text-2xl">
-    <label class="block">
+    <label class="flex gap-3">
       <span>Mi nombre es</span>
       <input id="nombre" placeholder="(Apellido, Nombre)" class="flex-1 border-b-2 border-[#0095c8] bg-transparent px-2 pb-1 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
     </label>
 
     <label class="flex gap-3">
-      <span>con documento</span>
+      <span>con</span>
+      <select name="" class="" id="tipoDocSelect">
+        <option selected value="CC">cédula de ciudadania</option>
+        <option value="CE">cédula de extranjería</option>
+        <option value="PA">pasaporte</option>
+        <option value="PPT">Permiso por Protección Temporal</option>
+      </select>
       <input id="documento" placeholder="(Documento de identidad)" class="flex-1 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
     </label>
 
@@ -45,30 +58,33 @@
       <span>y nacido el</span>
       <input id="nacimiento" placeholder="(Fecha de nacimiento)" class="flex-1 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
     </label>
-
+    
+    <label class="flex gap-3">
+      <span>Mi número de celular es</span>
+      <input id="numero" placeholder="(+57 ...)" class="w-48 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
+    </label>
     <label class="flex">
-      <span>Mi correo es</span>
+      <span>con correo: </span>
       <input id="correo" placeholder="(Correo electrónico)" class="flex-1 px-2 pb-1 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="email" />
     </label>
 
-    <label class="flex gap-3">
-      <span>con número de celular</span>
-      <input id="numero" placeholder="(+57 ...)" class="w-48 text-2xl focus:outline-none sm:text-2xl md:text-2xl" type="text" />
-    </label>
 
     <h2 class="mt-6 text-center text-xl font-black tracking-tight sm:text-left sm:text-2xl md:mt-10 md:text-4xl">¡Y quiero formar parte de la familia Tiempos! 🚀</h2>
 
     <div class="mt-4 w-full text-center md:mt-8">
-      <button type="submit" class="mb-8 h-20 w-full cursor-pointer rounded-full bg-[#0095c8] px-6 py-3 text-2xl font-black text-white shadow-md transition-transform duration-200 hover:-translate-y-1 hover:bg-[#00677f] sm:w-2/3 sm:text-2xl md:w-1/2 md:px-8 md:py-4 md:text-2xl">Registrarme</button>
+      <button type="button" id="buttonSubmitCandidate" class="mb-8 h-20 w-full cursor-pointer rounded-full bg-[#0095c8] px-6 py-3 text-2xl font-black text-white shadow-md transition-transform duration-200 hover:-translate-y-1 hover:bg-[#00677f] sm:w-2/3 sm:text-2xl md:w-1/2 md:px-8 md:py-4 md:text-2xl">Registrarme</button>
     </div>
   </form>
 </main>
-
+<div id="toast-container"></div>
 <input type="text" id="inputScanner" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="hidden-input" autofocus />
-
-<script src="src/jquery.js"></script>
+<span id="tipoDocSpan" class="hidden-input"></span>
+<script src="/tiempos-registro/src/jquery.js"></script>
 <script src="/tiempos-registro/src/index.js"></script>
-
+<script src="/tiempos-registro/src/xlsx.js"></script>
+<!-- <script src="/src/jquery.js"></script>
+<script src="/src/xlsx.js"></script>
+<script src="/src/index.js"></script> -->
 
 </body>
 
